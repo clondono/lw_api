@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301203408) do
+ActiveRecord::Schema.define(version: 20150301205339) do
 
   create_table "page_views", force: true do |t|
-    t.string   "userID"
+    t.string   "userId"
     t.string   "path"
     t.string   "referrer"
-    t.string   "stitle"
+    t.string   "title"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
