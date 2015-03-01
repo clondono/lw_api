@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PageView, type: :model do
+ describe PageView do
  before { @page_view = FactoryGirl.build(:page_view) }
 
  subject { @page_view }
@@ -12,4 +12,10 @@ RSpec.describe PageView, type: :model do
  it { should respond_to(:url) }
 
  it { should be_valid }
+
+  it { should validate_presence_of(:userId) }
+  it { should validate_presence_of(:url) }
+ it { should validate_presence_of(:title) }
+
+
 end
