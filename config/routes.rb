@@ -1,3 +1,5 @@
+require 'api_constraints'
+
 LwApi::Application.routes.draw do  
   # Api definition
   namespace :api, defaults: { format: :json },
