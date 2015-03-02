@@ -7,7 +7,7 @@ LwApi::Application.routes.draw do
     scope module: :v1,
               constraints: ApiConstraints.new(version: 1, default: true) do
       # We are going to list our resources here
-    	resource :page_views, :only =>[:show]
+    	resource :page_views, :only =>[:index, :show]
     end
   end
 end
