@@ -1,6 +1,7 @@
 require 'api_constraints'
 
 LwApi::Application.routes.draw do  
+  mount SabisuRails::Engine => "/sabisu_rails"
   # Api definition
   namespace :api, defaults: { format: :json },
                               constraints: { subdomain: 'api' }, path: '/'  do
