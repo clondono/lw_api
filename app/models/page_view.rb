@@ -17,5 +17,9 @@ class PageView < ActiveRecord::Base
 		page_view_params[:url] = params[:properties][:url]
 		 return page_view_params
 	end		
+
+	  scope :filter_by_referrer, lambda { |keyword|
+    where("lower(referrer) LIKE ?", "%#{keyword.downcase}%" ) 
+  }
 end
 
