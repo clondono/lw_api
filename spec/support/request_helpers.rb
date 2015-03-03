@@ -8,7 +8,7 @@ module Request
   # Our headers helpers module
   module HeadersHelpers
     def api_header(version = 1)
-      request.headers['Accept'] = "application/vnd.lwapi.v#{version}"
+      request.headers['Accept'] = "application/vnd.lw.v#{version}"
     end
 
     def api_response_format(format = Mime::JSON)

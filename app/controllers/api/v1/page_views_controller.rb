@@ -8,4 +8,10 @@ class Api::V1::PageViewsController < ApplicationController
   def show
     respond_with PageView.find(params[:id])
   end
+
+  private
+
+    def page_view_params
+      params.require(:page_view).permit(:title, :url, :path) 
+    end
 end

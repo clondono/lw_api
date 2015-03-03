@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/IcaliaLabs/sabisu-rails.git
+  revision: de6340971e70589de2ae2cb0d8170a9a9df84103
+  specs:
+    sabisu_rails (0.0.2.beta)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+      httparty (~> 0.13)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -28,7 +37,13 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     builder (3.1.4)
+    chunky_png (1.3.4)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -36,6 +51,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1)
+    compass (0.12.7)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.2.19)
+    compass-rails (1.1.7)
+      compass (>= 0.12.2)
+      sprockets (<= 2.11.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.3.0)
@@ -45,7 +67,17 @@ GEM
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     ffaker (1.32.1)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
+    fssm (0.2.10)
+    furatto (1.3.7)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      railties (>= 3.0)
     hike (1.2.3)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
@@ -57,6 +89,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.3)
@@ -76,7 +109,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
-      json (~> 1.4)
+    rspec-collection_matchers (1.1.2)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.2.1)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.0)
@@ -94,19 +128,21 @@ GEM
       rspec-mocks (~> 3.2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
-    sass (3.4.13)
-    sass-rails (5.0.1)
+    sass (3.2.19)
+    sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (~> 1.1)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
+      sprockets-rails (~> 2.0)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-    sprockets (2.12.3)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+    sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -132,14 +168,21 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  better_errors
   coffee-rails (~> 4.0.0)
+  compass-rails (= 1.1.7)
   factory_girl_rails
   ffaker
+  font-awesome-rails
+  furatto
   jquery-rails
   rails (= 4.0.2)
+  rspec-collection_matchers
   rspec-rails
-  sass-rails
+  sabisu_rails!
+  sass-rails (= 4.0.3)
   sdoc
   shoulda-matchers
+  simple_form
   sqlite3
   uglifier (>= 1.3.0)
