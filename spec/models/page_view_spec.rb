@@ -19,10 +19,10 @@ require 'rails_helper'
 
 	describe ".filter_by_referrer" do
     before(:each) do
-      @page_view1 = FactoryGirl.create :page_view, referrer: "A plasma TV", userId: "user123", title: "Title", url: "www.com"
-      @page_view2 = FactoryGirl.create :page_view, referrer: "Fastest Laptop", userId: "user123", title: "Title", url: "www.com"
-      @page_view3 = FactoryGirl.create :page_view, referrer: "CD player", userId: "user123", title: "Title", url: "www.com"
-      @page_view4 = FactoryGirl.create :page_view, referrer: "LCD TV", userId: "user123", title: "Title", url: "www.com"
+      @page_view1 = FactoryGirl.create :page_view, referrer: "A plasma TV", userId: "user1", title: "Title", url: "www.com"
+      @page_view2 = FactoryGirl.create :page_view, referrer: "Fastest Laptop", userId: "user2", title: "Title", url: "www.com"
+      @page_view3 = FactoryGirl.create :page_view, referrer: "CD player", userId: "user3", title: "Title", url: "www.com"
+      @page_view4 = FactoryGirl.create :page_view, referrer: "LCD TV", userId: "user4", title: "Title", url: "www.com"
 
     end
 
@@ -39,10 +39,10 @@ require 'rails_helper'
 
 	describe ".filter_by_time" do
     before(:each) do
-      @page_view1 = FactoryGirl.create :page_view, referrer: "A plasma TV", userId: "user123", title: "Title", url: "www.com", created_at: DateTime.parse("2012-02-27 00:00:00")
-      @page_view2 = FactoryGirl.create :page_view, referrer: "Fastest Laptop", userId: "user123", title: "Title", url: "www.com", created_at: DateTime.parse("2013-02-27 00:00:00")
-      @page_view3 = FactoryGirl.create :page_view, referrer: "CD player", userId: "user123", title: "Title", url: "www.com", created_at: DateTime.parse("2014-02-27 00:00:00")
-      @page_view4 = FactoryGirl.create :page_view, referrer: "LCD TV", userId: "user123", title: "Title", url: "www.com", created_at: DateTime.parse("2015-02-27 00:00:00")
+      @page_view1 = FactoryGirl.create :page_view, referrer: "A plasma TV", userId: "user1", title: "Title", url: "www.com", created_at: DateTime.parse("2012-02-27 00:00:00")
+      @page_view2 = FactoryGirl.create :page_view, referrer: "Fastest Laptop", userId: "user2", title: "Title", url: "www.com", created_at: DateTime.parse("2013-02-27 00:00:00")
+      @page_view3 = FactoryGirl.create :page_view, referrer: "CD player", userId: "user2", title: "Title", url: "www.com", created_at: DateTime.parse("2014-02-27 00:00:00")
+      @page_view4 = FactoryGirl.create :page_view, referrer: "LCD TV", userId: "user4", title: "Title", url: "www.com", created_at: DateTime.parse("2015-02-27 00:00:00")
 
     end
 

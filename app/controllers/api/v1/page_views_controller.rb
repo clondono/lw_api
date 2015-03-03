@@ -2,7 +2,7 @@ class Api::V1::PageViewsController < ApplicationController
   respond_to :json
 
   def index
-  	respond_with PageView.all 
+  	respond_with PageView.search(params) 
   end
   
   def show

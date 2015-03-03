@@ -2,7 +2,7 @@ class Api::V1::VisitsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Visit.all 
+    respond_with Visit.search(params) 
   end
   
   def show
