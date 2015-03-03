@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -41,16 +41,20 @@ gem 'active_model_serializers'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :test do
-  gem "rspec-rails"
+group :development, :test do
   gem "factory_girl_rails"
   gem 'ffaker'
+end
+
+group :test do
+  gem "rspec-rails"
   gem 'shoulda-matchers'
-  gem 'rspec-collection_matchers'
+  gem "rspec-collection_matchers"
 end
 
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
-gem 'compass-rails'
+gem 'compass-rails', '1.1.7'
 gem 'furatto'
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'better_errors'
