@@ -18,8 +18,13 @@ class PageView < ActiveRecord::Base
 		 return page_view_params
 	end		
 
-	  scope :filter_by_referrer, lambda { |keyword|
+	scope :filter_by_referrer, lambda { |keyword|
     where("lower(referrer) LIKE ?", "%#{keyword.downcase}%" ) 
+  }
+
+
+	scope :filter_by_date, lambda { |start_time, end_time|
+    where("created_at BETWEEN ? AND ?", start_time, end_time) 
   }
 end
 
