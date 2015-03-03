@@ -8,6 +8,7 @@ LwApi::Application.routes.draw do
       # We are going to list our resources here
       resources :page_views, :only => [:show, :index, :create]
       resources :visits, :only => [:show, :index, :create]
+      resources :purchases, :only => [:show, :index, :create]
     end
   end
 end

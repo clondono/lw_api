@@ -10,11 +10,11 @@ class Api::V1::VisitsController < ApplicationController
   end
 
   def create
-    page_view = Visit.create(visit_params)
-    if page_view.save
-      render json: page_view, status: 201, location: [:api, page_view]
+    visit = Visit.create(visit_params)
+    if visit.save
+      render json: visit, status: 201, location: [:api, visit]
     else
-      render json: { errors: page_view.errors }, status: 422
+      render json: { errors: visit.errors }, status: 422
     end
   end
   
