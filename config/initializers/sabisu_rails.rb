@@ -22,7 +22,7 @@ SabisuRails.setup do |config|
   # config.layout = "sabisu"
 
   # Resources on the api
-  config.resources = [:page_views, :visits]
+  config.resources = [:page_views, :visits, :purchases]
   config.default_resource = :page_views
 
   # Application name
