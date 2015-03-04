@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :visit do
-    userId { Faker::Internet.user_name() }
+    userId "user123"
 		email { Faker::Internet.email() }
 		name  { Faker::Name.name() }
 		subscriptionPlan "MyString"

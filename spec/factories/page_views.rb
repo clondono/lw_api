@@ -2,7 +2,7 @@ require 'active_support/core_ext'
 
 FactoryGirl.define do
   factory :page_view do
-    userId { Faker::Internet.user_name() }
+    userId "user123"
 
 		path { Faker::Internet.http_url() }
 		referrer { Faker::Internet.http_url() }

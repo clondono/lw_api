@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150303072633) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "page_views", force: true do |t|
     t.string   "userId"
     t.string   "path"

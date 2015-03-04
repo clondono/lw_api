@@ -3,12 +3,12 @@ class PageView < ActiveRecord::Base
 
 
 	scope :filter_by_referrer, lambda { |keyword|
-    where("lower(referrer) LIKE ?", "%#{keyword.downcase}%" ).select("DISTINCT userId") 
+    where("lower(referrer) LIKE ?", "%#{keyword.downcase}%" ).select("DISTINCT \"userId\"")
   }
 
 
 	scope :filter_by_date, lambda { |start_time, end_time|
-    where("created_at BETWEEN ? AND ?", start_time, end_time).select("DISTINCT userId")  
+    where("created_at BETWEEN ? AND ?", start_time, end_time).select("DISTINCT \"userId\"") 
   }
 
   def self.search(params ={} )

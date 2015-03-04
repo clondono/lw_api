@@ -2,7 +2,7 @@ class Visit < ActiveRecord::Base
 		validates :userId, presence: true
 
 	scope :filter_by_date, lambda { |start_time, end_time|
-    where("created_at BETWEEN ? AND ?", start_time, end_time).select("DISTINCT userId")  
+    where("created_at BETWEEN ? AND ?", start_time, end_time).select("DISTINCT \"userId\"")  
   }
 
   def self.search(params ={} )

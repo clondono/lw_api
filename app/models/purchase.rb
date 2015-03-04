@@ -18,7 +18,7 @@ class Purchase < ActiveRecord::Base
   	purchases = Purchase.all
   	end_time = params[:end_time] ? params[:end_time] : DateTime.now
   	purchases = purchases.filter_by_date(params[:start_time], end_time) if params[:start_time] 
-  	params[:start_time] ? { unique_count: purchases.select("DISTINCT userId").length, sum: Purchase.find_sum(purchases) } : purchases
+  	params[:start_time] ? { unique_count: purchases.select("DISTINCT \"userId\"").count, sum: Purchase.find_sum(purchases) } : purchases
   	
   end
 
