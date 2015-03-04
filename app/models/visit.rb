@@ -9,7 +9,7 @@ class Visit < ActiveRecord::Base
   	visits = Visit.all
   	end_time = params[:end_time] ? params[:end_time] : DateTime.now
   	visits = visits.filter_by_date(params[:start_time], end_time) if params[:start_time] 
-  	visits
+  	params[:start_time] ? { unique_count: visits.length } : visits
   end
 
 	def self.create_from_api(params)

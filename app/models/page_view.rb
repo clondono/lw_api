@@ -17,7 +17,8 @@ class PageView < ActiveRecord::Base
   	page_views = page_views.filter_by_date(params[:start_time], end_time) if params[:start_time] 
   	page_views = page_views.filter_by_referrer(params[:referrer]) if params[:referrer]
 
-  	page_views
+  	params[:start_time] ? { unique_count: page_views.length }: page_views
+
   end
 
 	def self.create_from_api(params)
