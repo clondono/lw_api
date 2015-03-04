@@ -16,8 +16,8 @@ class PageView < ActiveRecord::Base
   	end_time = params[:end_time] ? params[:end_time] : DateTime.now
   	page_views = page_views.filter_by_date(params[:start_time], end_time) if params[:start_time] 
   	page_views = page_views.filter_by_referrer(params[:referrer]) if params[:referrer]
-
-  	params[:start_time] ? { unique_count: page_views.length }: page_views
+  	query = params[:start_time] || params[:referrer]
+  	query ? { unique_count: page_views.length }: page_views
 
   end
 
